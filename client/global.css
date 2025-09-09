@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Modern Portfolio & Learning Platform Design System
+   * Glassmorphism and modern UI design tokens
+   */
+  :root {
+    /* Base colors - Modern purple/blue gradient theme */
+    --background: 245 40% 97%;
+    --foreground: 224 71% 4%;
+
+    /* Glass morphism colors */
+    --glass-primary: 250 100% 97%;
+    --glass-secondary: 240 100% 98%;
+    --glass-accent: 260 100% 96%;
+
+    /* Brand colors - Purple/Blue gradient theme */
+    --primary: 250 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 100% 96%;
+    --secondary-foreground: 224 71% 4%;
+
+    /* Interactive elements */
+    --accent: 260 84% 70%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 240 100% 96%;
+    --muted-foreground: 215 25% 27%;
+
+    /* UI elements */
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 240 20% 90%;
+    --input: 240 20% 94%;
+    --ring: 250 84% 60%;
+
+    /* Radius for modern design */
+    --radius: 0.75rem;
+
+    /* Sidebar colors */
+    --sidebar-background: 250 100% 98%;
+    --sidebar-foreground: 224 71% 4%;
+    --sidebar-primary: 250 84% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 100% 96%;
+    --sidebar-accent-foreground: 224 71% 4%;
+    --sidebar-border: 240 20% 90%;
+    --sidebar-ring: 250 84% 60%;
+  }
+
+  .dark {
+    /* Dark mode - Deep space theme */
+    --background: 224 71% 4%;
+    --foreground: 0 0% 98%;
+
+    /* Glass morphism - Dark */
+    --glass-primary: 224 71% 8%;
+    --glass-secondary: 224 71% 6%;
+    --glass-accent: 224 71% 10%;
+
+    /* Brand colors - Dark mode */
+    --primary: 250 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 224 71% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Interactive elements - Dark */
+    --accent: 260 84% 70%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 224 71% 10%;
+    --muted-foreground: 215 20% 65%;
+
+    /* UI elements - Dark */
+    --card: 224 71% 6%;
+    --card-foreground: 0 0% 98%;
+    --popover: 224 71% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Status colors - Dark */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Borders and inputs - Dark */
+    --border: 224 71% 15%;
+    --input: 224 71% 12%;
+    --ring: 250 84% 60%;
+
+    /* Sidebar colors - Dark */
+    --sidebar-background: 224 71% 6%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 250 84% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 71% 10%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 224 71% 15%;
+    --sidebar-ring: 250 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "opsz" 32;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Glassmorphism utilities */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Dark mode glassmorphism */
+  .dark .glass {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .glass-strong {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .dark .glass-subtle {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Gradient backgrounds */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--muted)) 100%);
+  }
+
+  .gradient-mesh {
+    background:
+      radial-gradient(circle at 20% 80%, hsl(var(--primary) / 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--accent) / 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsl(var(--primary) / 0.2) 0%, transparent 50%);
+  }
+
+  /* Interactive elements */
+  .interactive-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .interactive-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Floating animation */
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+
+  .floating-delayed {
+    animation: floating 6s ease-in-out infinite;
+    animation-delay: -2s;
+  }
+
+  .floating-slow {
+    animation: floating 8s ease-in-out infinite;
+    animation-delay: -4s;
+  }
+
+  /* 3D Flip Card Utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Keyframe animations */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation utilities */
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out;
+}
