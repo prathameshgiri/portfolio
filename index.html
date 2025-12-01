@@ -1,31 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prathamesh Giri</title>
-    <link rel="icon" type="image/png" href="https://prathameshgiri.github.io/images/gpsnew.jpeg">
-
-    <meta name="google-site-verification" content="Qr983VITCrnB7ihBGxkMSG1Sm8m73O4akpoIYwPmr2c" />
     
-    <meta name="description"
-      content="Prathamesh Giri - Creative Software Developer skilled in Web Development, App Development, and Graphic Design. Explore projects, notes, and learning resources.">
-    <meta name="keywords"
-      content="Prathamesh Giri, Portfolio, Software Developer, Web Developer, App Developer, Projects, Notes, Learning Platform, Latur, India">
-    <meta name="author" content="Prathamesh Giri">
-    
-    <!-- Open Graph (Facebook & LinkedIn) -->
-    <meta property="og:title" content="Prathamesh Giri | Software Developer Portfolio">
-    <meta property="og:description"
-      content="Explore projects, notes, and resources by Prathamesh Giri, a creative developer passionate about building modern applications.">
-    <meta property="og:image" content="https://prathameshgiri.github.io/assets/og-image.png">
-    <meta property="og:url" content="https://prathameshgiri.github.io/">
-    <meta property="og:type" content="website">
-  </head>
+    <!-- Redirect after 3 seconds -->
+    <meta http-equiv="refresh" content="3; url=https://pro.prathameshgiri.in/" />
 
-  <body>
-    <div id="root"></div>
+    <title>Redirecting...</title>
 
-    <script type="module" src="/client/App.tsx"></script>
-  </body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            font-family: "Poppins", sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+
+        .loader {
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-top: 5px solid #fff;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            margin: 25px auto;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Redirecting...</h1>
+        <p>You will be taken to the requested page shortly.</p>
+        <div class="loader"></div>
+        <p>If you are not redirected, <a href="https://pro.prathameshgiri.in/" style="color:#fff; text-decoration: underline;">click here</a>.</p>
+    </div>
+</body>
 </html>
